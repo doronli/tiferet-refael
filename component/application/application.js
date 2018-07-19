@@ -5,7 +5,7 @@ var app = angular.module('app',[
     //internal
     'home',
     'contactUs',
-    'price',
+    'torah-lesson',
     'questions',
     'events'
 ]);
@@ -15,14 +15,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
 
-        // HOME STATES AND NESTED VIEWS ========================================
+        // HOME STATES AND NESTED VIEWS
         .state('home', {
             url: '/home',
             controller:function($scope){
-            console.log("hello");
-                $scope.MenuIconFunc = function(){
-                    console.log("work")
-                }
+              
             },
             template: '<home></home>'
         })
@@ -30,9 +27,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/contact-us',
             template: '<contact-us></contact-us>'
         })
-        .state('price', {
-            url: '/price',
-            template: '<price></price>'
+        .state('torah-lesson', {
+            url: '/torah-lesson',
+            template: '<torah-lesson></torah-lesson>'
         })
         .state('questions', {
             url: '/questions',

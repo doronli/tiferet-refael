@@ -9,7 +9,7 @@ app.component("contactUs",{
     $(document).on("click", '#contact-us-button', function () {
         //var error = ValidationContactForm();
        
-            console.log("open system");
+          
             
             $.ajax({
                 type: "POST",
