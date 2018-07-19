@@ -33,28 +33,31 @@ $(document).ready(function () {
 
         })
     }
-    else if(widthScreen <= 320){
-            var mySwiper = new Swiper('.swiper-container', {
-                // Optional parameters
-                loop: true,
-                slidesPerView: 1,
-                spaceBetween: 10,
-                autoplay: {
-                    delay: 5000
-                },
+    else if(widthScreen <= 420){
+        $('li').click(function () {
+            $(this).css('display','none');
+        })
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            autoplay: {
+                delay: 5000
+            },
 
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
 
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
 
-            })
+        })
         }
     window.onload = function () {
             // solve the problem when refresh page the active page will be always the home page 
@@ -64,10 +67,8 @@ $(document).ready(function () {
             $('li').removeClass('active');
             $('#' + pageId).addClass('active');
     }
-   
-<<<<<<< HEAD
 
-=======
+
     //Contact us form
     $(document).on("click", '#contact-us-button', function () {
         var error = ValidationContactForm();
@@ -90,7 +91,7 @@ $(document).ready(function () {
             });
         }
     });
->>>>>>> 699aa167472c8e4553513aea6216384458e7468d
+
     
 
 });
