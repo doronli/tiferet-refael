@@ -74,3 +74,34 @@ body{
         min-height: 125px;
     }
 }
+
+
+
+/* youtube */
+section {
+    font-size: 0;
+  }
+  
+  section div {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  section div:first-child {
+    width: 70%;
+    float: left;
+  }
+  
+  section div + div {
+    width: 30%;
+    float: left;
+  }
+  
+  section div iframe {
+    border: 0;
+    width: 100%;
+  }
+  
+  section div:first-child iframe {
+    height: 500px;
+  }

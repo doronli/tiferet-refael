@@ -1,21 +1,17 @@
-$(window).scroll(() => {
-    if($(document).scrollTop() > 50){
-        $('.nav').addClass('affix');
-        $('.logo img').removeClass("logo-img-before-scroll");
-        $('.logo img').addClass("logo-img-after-scroll");
-    }
-    else{
-        $('.nav').removeClass('affix');
+function onGoogleLoad() {
+    gapi.client.setApiKey('AIzaSyCNJf1KkOjXqBIP8J7x1gKPGdxWFPnbf_Q');
+    gapi.client.load('youtube', 'v3', function() {
 
-        $('.logo img').removeClass("logo-img-after-scroll");
-        $('.logo img').addClass("logo-img-before-scroll");
+        var request = gapi.client.youtube.playlistItems.list({
+            part: 'snippet',
+            playlistId: 'PLmEkPiivqLRW7QbBzg75-lDkbPRkedNSg',
+            maxResults: 50
+        });
 
-    }
-});
-
-$('.navTrigger').click( () => {
-    $(this).toggleClass('active');
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
-
-});
+        request.execute(function(response) {
+            for (var i = 0; i < response.items.length; i++) {
+                console.log(response.items[i].snippet.title + " published at " + response.items[i].snippet.publishedAt)
+            }
+        });
+    });
+}
