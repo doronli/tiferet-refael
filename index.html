@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,9 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 </head>
-<body dir="rtl"> 
-    
+
+<body dir="rtl">
+
     <!-- <nav class="nav">
         <div class="container">
             <div class="logo">
@@ -38,64 +40,109 @@
         <a class="navbar-brand" href="/">
             <img src="/img/tiferet-refael-logo.png" class="logo-image" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link text-right active" href="/">בית <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link text-right" href="#">Features</a>
-            <a class="nav-item nav-link text-right" target="_blank" href="https://nedar.im/6000906
+            <div class="navbar-nav">
+                <a class="nav-item nav-link text-right active" href="/">בית <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link text-right" href="#">Features</a>
+                <a class="nav-item nav-link text-right" target="_blank" href="https://nedar.im/6000906
             ">תרומה לבית הכנסת</a>
-          </div>
+            </div>
         </div>
-      </nav>
+    </nav>
 
 
-      <section id="about-section">
-          <div id="about-title" class="d-flex justify-content-center">
-              <p class="title-home-page">
-                  הפעילויות שלנו
-              </p>
-          </div>
-          <div class="container synagogue-activity">
-              <div class="row">
-                  <div class="col-lg-4">
-                      <div class="actvity-section">
-                          <img src="/img/tiferet-refael-background.jpg" class="activity-image" alt="">
-                          <p class="activity-name">
-                              שיעורי תורה
-                          </p>
-                          <p class="activity-description">
-                              בכל יום בין מנחה לערבית
-                                <br>
-                              יום ראשון: 20:30-22:00
-                                <br>
-                                יום שלישי שיעור מרכזי: 20:30-22:00
-                                <br>
-                                דף היומי בכל יום בשעה 9:30
-                          </p>
-                      </div>
-                  </div>
-                  <div class="col-lg-4">
+    <section id="about-section">
+        <div id="about-title" class="d-flex justify-content-center">
+            <p class="title-home-page">
+                הפעילויות שלנו
+            </p>
+        </div>
+        <div class="container">
+            <div class="row synagogue-activity">
+                <div class="col-lg-4">
+                    <div class="actvity-section">
+                        <img src="/img/tiferet-refael-background.jpg" class="activity-image" alt="">
+                        <p class="activity-name">
+                            שיעורי תורה
+                        </p>
+                        <p class="activity-description">
+                            בכל יום בין מנחה לערבית
+                            <br>
+                            יום ראשון: 20:30-22:00
+                            <br>
+                            יום שלישי שיעור מרכזי: 20:30-22:00
+                            <br>
+                            דף היומי בכל יום בשעה 9:30
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
                     <div class="actvity-section">
                         <img src="/img/tiferet-refael-background.jpg" class="activity-image" alt="">
                         <p class="activity-name">
                             אבות ובנים
                         </p>
                         <p class="activity-description">
-                           בכל שבת בצהריים לימוד אבות ובנים
+                            בכל שבת בצהריים לימוד אבות ובנים. 
+                            לימוד מעשיר בין האבות לבנים האורכת כשעה עם חלוקת פרסים, ממתקים, ומסיבה בסוף שנה לילדים.
                         </p>
                     </div>
                 </div>
-              </div>
-          </div>
-      </section>
+                <div class="col-lg-4">
+                    <div class="actvity-section">
+                        <img src="/img/tiferet-refael-background.jpg" class="activity-image" alt="">
+                        <p class="activity-name">
+                            פעילות צדקה
+                        </p>
+                        <p class="activity-description">
+                            בכל שבוע יש חלוקת לעשרות משפחות נזקקות.
+                            כמו כן בחגים יש חלוקה לכ- 1000 משפחות.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center py-4">
+                    שיעורים של מעלת מורנו
+                </h2>
+            </div>
+        </div>
+        <div class="row" id="main-torah-lesson"></div>
+        <div class="d-flex justify-content-center my-4">
+            <a class="link-button" href="#">לעוד שיעורים מרכזיים לחץ כאן</a>
+        </div>
+        <!-- daf yomi -->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center py-4">
+              שיעור בדף היומי
+                </h2>
+            </div>
+        </div>
+        <div class="row" id="daf-yomi"></div>
+        <!-- french torah -->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center py-4">
+                    שיעורים בצרפתית
+                </h2>
+            </div>
+        </div>
+        <div class="row" id="french-torah-lesson"></div>
+    </section>
 
-      <!-- <section id="video-container"></section> -->
-
-    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/script.js"></script>
+    <!-- jQuery library -->
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -103,12 +150,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <script>
-      
-    </script>
 
-    <script src="/script.js"></script>
-
-    <script src="https://apis.google.com/js/client.js?onload=onGoogleLoad"></script>
+    <!-- <script src="https://apis.google.com/js/client.js?onload=onGoogleLoad"></script> -->
 </body>
+
 </html>
