@@ -54,7 +54,7 @@ function googleApiKey() {
       }
     } else {
       favoriteVideos = localStorage.getItem("allFavoriteVideoes");
-      if (favoriteVideos > 0) {
+      if (favoriteVideos) {
         favoriteVideos = JSON.parse(favoriteVideos);
       }
       else{
