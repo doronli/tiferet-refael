@@ -12,8 +12,37 @@ body{
     color: rgb(90, 59, 34);
     font-size: 20px;
 }
+
+#navbar-website .nav-link:before {
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(90, 59, 34);
+    -webkit-transform: scale(1,0);
+    -moz-transform: scale(1,0);
+    -ms-transform: scale(1,0);
+    -o-transform: scale(1,0);
+    transform: scale(1,0);
+    -webkit-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
 #navbar-website .nav-link:hover{
-    font-weight: bold;
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+    transform: scale(1,1);
 }
 #about-section #about-title{
     height: 250px;
@@ -33,7 +62,8 @@ body{
     position: relative;
     padding-top: 130px;
 }
-#about-section .actvity-section{
+#about-section .actvity-section,
+.youtube-video{
     background: #FFFFFF;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -85,12 +115,38 @@ iframe {
     color: white;
     border-color: rgb(90, 59, 34);
 }
+.checked{
+    color: yellow;
+}
+.fa-star{
+    font-size: 20px;
+    cursor: pointer !important;
+    margin-top: 10px;
+}
+.fa-star:hover{
+    color: yellow;
+}
+.youtube-video-title{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.alert{
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
 @media screen and (max-width: 600px){
 
 }
 @media screen and (min-width: 600px){
     #about-section .activity-description{
         min-height: 125px;
+    }
+    #main-torah-lesson .youtube-video-title,
+    #all-lesson-list .youtube-video-title{
+        min-height: 91px;
     }
 }
 

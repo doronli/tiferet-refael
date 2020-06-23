@@ -8,7 +8,9 @@
     <title>בית כנסת תפארת רפאל</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- style css -->
     <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 </head>
@@ -47,14 +49,14 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link text-right active" href="/">בית <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link text-right" href="#">Features</a>
+                <a class="nav-item nav-link text-right" href="favoritelesson.html">שיעורי תורה מועדפים</a>
                 <a class="nav-item nav-link text-right" target="_blank" href="https://nedar.im/6000906
             ">תרומה לבית הכנסת</a>
             </div>
         </div>
     </nav>
 
-
+   
     <section id="about-section">
         <div id="about-title" class="d-flex justify-content-center">
             <p class="title-home-page">
@@ -107,28 +109,37 @@
             </div>
         </div>
     </section>
-   
-    <section class="container">
+    
+    <section class="container" id="all-torah-lesson-section">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center py-4">
                     שיעורים של מעלת מורנו
                 </h2>
+                <p class="text-center w-100">
+                    לחץ על הכוכב כדי לשמור את השיעורים בדף "שיעורי תורה מועדפים"
+                </p>
             </div>
         </div>
         <div class="row" id="main-torah-lesson"></div>
         <div class="d-flex justify-content-center my-4">
-            <a class="link-button" href="#">לעוד שיעורים מרכזיים לחץ כאן</a>
+            <a class="link-button" href="torahvideos.html?listId=PLmEkPiivqLRWUcy4K1Is8DlAY1hqoS_Xc">לעוד שיעורים מרכזיים לחץ כאן</a>
         </div>
         <!-- daf yomi -->
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center py-4">
-              שיעור בדף היומי
+                שיעור בדף היומי
                 </h2>
+                <p class="text-center w-100">
+                    לחץ על הכוכב כדי לשמור את השיעורים בדף "שיעורי תורה מועדפים"
+                </p>
             </div>
         </div>
         <div class="row" id="daf-yomi"></div>
+        <div class="d-flex justify-content-center my-4">
+            <a class="link-button" href="torahvideos.html?listId=PLmEkPiivqLRXos72fznKVJYOQ7GvRV4Ex">לעוד שיעורים של הדף היומי לחץ כאן</a>
+        </div>
         <!-- french torah -->
         <div class="row">
             <div class="col-12">
@@ -139,6 +150,16 @@
         </div>
         <div class="row" id="french-torah-lesson"></div>
     </section>
+
+    <div class="alert alert-success text-center" id="success-alert" role="alert">
+        הסרטון נוסף בהצלחה!
+        <br>
+        למעבר לכל הסרטונים המועדפים לחץ 
+        <a href="favoritelesson.html">כאן</a>
+    </div>
+    <div class="alert alert-danger" id="danger-alert" role="alert">
+        הסרטון הוסר בהצלחה!
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/script.js"></script>
