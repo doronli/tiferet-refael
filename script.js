@@ -44,14 +44,22 @@ function googleApiKey() {
       // torah videos page
       const listObj = getListObject();
       playlistItem(listObj);
+
     } else if (window.location.href.indexOf("favoritelesson") > -1) {
       // favorite lesson page
       favoriteVideos = localStorage.getItem("allFavoriteVideoes");
-      if (favoriteVideos.length > 0) {
+      if (favoriteVideos) {
         favoriteVideos = JSON.parse(favoriteVideos);
         loadFavoriteVideos();
       }
     } else {
+      favoriteVideos = localStorage.getItem("allFavoriteVideoes");
+      if (favoriteVideos > 0) {
+        favoriteVideos = JSON.parse(favoriteVideos);
+      }
+      else{
+        favoriteVideos = [];
+      }
       listPlaylist.forEach(playlistItem);
     }
   });
@@ -188,11 +196,5 @@ function removeVideoToFavorite(videoId) {
 
 $(document).ready(() => {
   googleApiClient();
-  favoriteVideos = localStorage.getItem("allFavoriteVideoes");
-  if (favoriteVideos.length > 0) {
-    favoriteVideos = JSON.parse(favoriteVideos);
-  }
-  else{
-    favoriteVideos = [];
-  }
+
 });
