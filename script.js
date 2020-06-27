@@ -40,31 +40,32 @@ function googleApiKey() {
   var apiKey = "AIzaSyCNJf1KkOjXqBIP8J7x1gKPGdxWFPnbf_Q";
   gapi.client.setApiKey(apiKey);
   gapi.client.load("youtube", "v3", function () {
+    getFavoriteVideoFromLocalStorage();
+
     if (window.location.href.indexOf("torahvideos") > -1) {
       // torah videos page
       const listObj = getListObject();
       playlistItem(listObj);
 
-    } else if (window.location.href.indexOf("favoritelesson") > -1) {
+    } 
+    else if (window.location.href.indexOf("favoritelesson") > -1) {
       // favorite lesson page
-      favoriteVideos = localStorage.getItem("allFavoriteVideoes");
-      if (favoriteVideos) {
-        favoriteVideos = JSON.parse(favoriteVideos);
-        loadFavoriteVideos();
-      }
-    } else {
-      favoriteVideos = localStorage.getItem("allFavoriteVideoes");
+    } 
+    else { // home page
+    
+      listPlaylist.forEach(playlistItem);
+    }
+  });
+}
+function getFavoriteVideoFromLocalStorage(){
+  favoriteVideos = localStorage.getItem("allFavoriteVideoes");
       if (favoriteVideos) {
         favoriteVideos = JSON.parse(favoriteVideos);
       }
       else{
         favoriteVideos = [];
       }
-      listPlaylist.forEach(playlistItem);
-    }
-  });
 }
-
 //
 function loadFavoriteVideos() {
   $("#favorite-lesson-list").html("");
@@ -132,20 +133,24 @@ function showVideo(divId) {
 function creatYoutubeVideoContainer(divId, videoId, videoTitle) {
   var container = document.getElementById(divId);
   var videoDiv = document.createElement("div");
-  videoDiv.className = "col-lg-4 my-lg-4 youtube-video";
+  var videoDivInside = document.createElement("div");
+  videoDiv.className = "col-lg-4 my-lg-4";
+  videoDivInside.className = "col-md-12 youtube-video";
+  videoDiv.appendChild(videoDivInside);
+  
   var iframe = document.createElement("iframe");
   iframe.setAttribute("src", "https://www.youtube.com/embed/" + videoId);
-  $(videoDiv).append(
+  $(videoDivInside).append(
     `<p class="text-center youtube-video-title">${videoTitle}</p>`
   );
   container.appendChild(videoDiv);
-  videoDiv.appendChild(iframe);
+  videoDivInside.appendChild(iframe);
   if (favoriteVideos.indexOf(videoId) === -1) {
-    $(videoDiv).append(`<p class=" w-100 text-center"> 
+    $(videoDivInside).append(`<p class=" w-100 text-center"> 
       <span class="fa fa-star" data-video-id="${videoId}"></span>
       </p>`);
   } else {
-    $(videoDiv).append(`<p class=" w-100 text-center"> 
+    $(videoDivInside).append(`<p class=" w-100 text-center"> 
       <span class="fa fa-star checked" data-video-id="${videoId}"></span>
       </p>`);
   }
